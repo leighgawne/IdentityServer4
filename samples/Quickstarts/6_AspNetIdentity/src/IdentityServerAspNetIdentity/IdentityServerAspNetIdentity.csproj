@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d1d8b219-efce-4f8f-8ac9-304ec49912ea</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.0.0" />
 
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.5" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
 
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />

@@ -29,6 +29,8 @@ namespace IdentityServerHost.Quickstart.UI
 
         public IActionResult Index()
         {
+            return View();
+
             if (_environment.IsDevelopment())
             {
                 // only show in development
@@ -55,7 +57,7 @@ namespace IdentityServerHost.Quickstart.UI
                 if (!_environment.IsDevelopment())
                 {
                     // only show in development
-                    message.ErrorDescription = null;
+                    //message.ErrorDescription = null;
                 }
             }
 
