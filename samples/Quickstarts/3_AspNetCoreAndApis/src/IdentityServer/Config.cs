@@ -47,10 +47,15 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     
                     // where to redirect to after login
-                    RedirectUris = { "https://localhost:5002/signin-oidc" },
+                    //RedirectUris = { "https://leighs-p52:5002/signin-oidc" },
+                    //RedirectUris = { "https://localhost:5002/signin-oidc" },
+                    RedirectUris = { "https://nexar-client-demo.azurewebsites.net/signin-oidc" },
+
+                    AllowedCorsOrigins = new[] { "https://nexar-client-demo.azurewebsites.net" },
 
                     // where to redirect to after logout
-                    PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
+                    //PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
+                    PostLogoutRedirectUris = { "https://nexar-client-demo.azurewebsites.net/signout-callback-oidc" },
 
                     AllowedScopes = new List<string>
                     {

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcClient.Models;
 using System.Diagnostics;
@@ -30,7 +30,8 @@ namespace MvcClient.Controllers
 
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-            var content = await client.GetStringAsync("https://localhost:6001/identity");
+            //var content = await client.GetStringAsync("https://localhost:6001/identity");
+            var content = await client.GetStringAsync("https://nexar-api-demo.azurewebsites.net/identity");
 
             ViewBag.Json = JArray.Parse(content).ToString();
             return View("json");
